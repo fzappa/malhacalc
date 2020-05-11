@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MalhaCalc</class>
+ <widget class="QMainWindow" name="MalhaCalc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1072</width>
+    <height>569</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MalhaCalc v0.5</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../emf.ico</normaloff>../emf.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>471</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>Dados de entrada</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <widget class="QFrame" name="frame_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>221</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QSplitter" name="splitter_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>148</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QLabel" name="label_Largura">
+       <property name="text">
+        <string>Largura [m]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_Largura</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Rho1">
+       <property name="text">
+        <string>rho 1 [Ohm]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_Rho1</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Rho2">
+       <property name="text">
+        <string>rho 2 (terra) [Ohm]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_Rho2</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Imalha">
+       <property name="text">
+        <string>I (malha) [A]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_CorrenteMalha</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Hastes">
+       <property name="text">
+        <string>Hastes</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_Hastes</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Rmin">
+       <property name="text">
+        <string>Rmin(malha) [Ohm]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_Rmin</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Tamb">
+       <property name="text">
+        <string>T ambiente [C]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_Tambiente</cstring>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QSplitter" name="splitter">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>6</y>
+        <width>51</width>
+        <height>217</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_Largura">
+       <property name="text">
+        <string>70</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Rho1">
+       <property name="text">
+        <string>2500</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Rho2">
+       <property name="text">
+        <string>400</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_CorrenteMalha">
+       <property name="text">
+        <string>1200</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Hastes">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Rmin">
+       <property name="text">
+        <string>2.78</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Tambiente">
+       <property name="text">
+        <string>40</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frame_2">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>30</y>
+       <width>231</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QSplitter" name="splitter_3">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>10</y>
+        <width>61</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_Comprimento">
+       <property name="text">
+        <string>70</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_D1">
+       <property name="text">
+        <string>0.102</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_N">
+       <property name="text">
+        <string>0.67</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_TCurto">
+       <property name="text">
+        <string>0.5</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_HMalha">
+       <property name="text">
+        <string>0.5</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_DistCond">
+       <property name="text">
+        <string>7</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_TMax">
+       <property name="text">
+        <string>850</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QSplitter" name="splitter_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>141</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QLabel" name="label_Comprimento">
+       <property name="text">
+        <string>Comprimento [m]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_Comprimento</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_D1">
+       <property name="text">
+        <string>d1 [m]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_D1</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_N">
+       <property name="text">
+        <string>N</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_N</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Tcurto">
+       <property name="text">
+        <string>T curto [seg]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_TCurto</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Hmalha">
+       <property name="text">
+        <string>H malha [m]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_HMalha</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_DistCond">
+       <property name="text">
+        <string>Dist cond [m]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_DistCond</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Tmax">
+       <property name="text">
+        <string>T max [C]</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_TMax</cstring>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>360</y>
+       <width>211</width>
+       <height>62</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_Material">
+        <property name="text">
+         <string>Material</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="buddy">
+         <cstring>comboBox_Material</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_Material">
+        <property name="currentText">
+         <string>Brita</string>
+        </property>
+        <property name="currentIndex">
+         <number>5</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>Pântano</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Lodo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Humus</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Areia Argilosa</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Areia Silicosa</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Brita</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Calcáreo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Granito</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>239</x>
+       <y>360</y>
+       <width>230</width>
+       <height>62</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_Condutor">
+        <property name="text">
+         <string>Condutor</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="buddy">
+         <cstring>comboBox_Condutor</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_Condutor">
+        <property name="currentText">
+         <string>Cobre comercial</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>Cobre mole</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cobre comercial</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cobre com alma de aço</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Alumínio com alma de aço</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Aço 1020</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Aço inoxidável</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Zinco</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Aço inoxidável 304</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>470</y>
+       <width>451</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_Calcular">
+        <property name="text">
+         <string>Calcular</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>13</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_Reset">
+        <property name="text">
+         <string>Reset</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>13</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_Sair">
+        <property name="text">
+         <string>Sair</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>40</y>
+      <width>561</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1072</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSobre">
+    <property name="title">
+     <string>Sobre</string>
+    </property>
+    <addaction name="actionConsideraes"/>
+    <addaction name="actionAutor"/>
+   </widget>
+   <addaction name="menuSobre"/>
+  </widget>
+  <action name="actionConsideraes">
+   <property name="text">
+    <string>Considerações</string>
+   </property>
+  </action>
+  <action name="actionAutor">
+   <property name="text">
+    <string>Autor</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_Sair</sender>
+   <signal>clicked()</signal>
+   <receiver>MalhaCalc</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>423</x>
+     <y>541</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>566</x>
+     <y>541</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
